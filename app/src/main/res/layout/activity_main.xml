@@ -334,7 +334,7 @@
         android:id="@+id/prayDoaa"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:backgroundTint="#0F2741"
+        android:backgroundTint="#1E3660"
         app:layout_constraintTop_toTopOf="@+id/guidDouTop"
         app:layout_constraintBottom_toTopOf="@+id/guidHorizantal"
         app:layout_constraintLeft_toLeftOf="parent"
