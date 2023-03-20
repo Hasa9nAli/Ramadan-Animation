@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primart_color"
+    tools:context=".MainActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_main_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/comp" />
+
+    <TextView
+        android:id="@+id/day_history_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/day_history_month"
+        android:textColor="@color/yallow"
+        android:textSize="@dimen/size_text_day_history_month"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView3" />
+
+    <TextView
+        android:id="@+id/rmadan_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="@string/ramadan_history"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_history_month" />
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/motion"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/prayDoaa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rmadan_history"
+        app:layoutDescription="@xml/activity_main_scene"
+        android:layout_margin="8dp">
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"
+
+            />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/firstCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guid"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Shri Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="4:35 AM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/shor" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <!--********************            ***********************-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/secondCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="@id/guid"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Shrok Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="6:16 AM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/shorok" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<!--        *********************************************-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/thirdCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guid"
+            app:layout_constraintTop_toBottomOf="@id/firstCard"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Duhr Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="12:22 PM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/duhr" />
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<!--        *********************************************-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fourthCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="@id/guid"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/secondCard"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="Asr Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp"
+
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="3:50 PM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/asur" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<!--******************************************************-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/fifthCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/guid"
+            app:layout_constraintTop_toBottomOf="@id/thirdCard"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="4dp"
+                    android:text="iftar Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="6:28 PM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/futor" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+<!--        ************************************** -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sixthCard"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/primart_color"
+            app:layout_constraintLeft_toLeftOf="@id/guid"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fourthCard"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#1E3660"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="isha Time"
+                    android:textColor="@color/secondary_text_color"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="7:58 PM"
+                    android:textColor="@color/yallow"
+                    android:textSize="16sp" />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:src="@drawable/esha" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidHorizantal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidDouTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/prayDoaa"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:backgroundTint="#0F2741"
+        app:layout_constraintTop_toTopOf="@+id/guidDouTop"
+        app:layout_constraintBottom_toTopOf="@+id/guidHorizantal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="16dp"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:text="Dua today "
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:textColor="@color/secondary_text_color"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ وَأَصْلِحْ لِي فِي ذُرِّيَّتِي إِنِّي تُبْتُ إِلَيْكَ وَإِنِّي مِنَ الْمُسْلِمِينَ)"
+            android:textColor="@color/yallow"
+            android:layout_marginRight="4dp"
+            />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

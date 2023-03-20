@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="image_height">200</dimen>
+    <dimen name="image_main_height">200dp</dimen>
+    <dimen name="size_text_day_history_month">16sp</dimen>
+    <dimen name="small">12sp</dimen>
+</resources>
